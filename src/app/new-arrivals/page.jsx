@@ -18,7 +18,7 @@ export default function NewArrivalsPage() {
 
   if (loading) {
     return (
-      <div className="h-screen relative top-[300px] bg-gray-50 py-12 px-4">
+      <div className="h-screen relative top-[180px] bg-gray-50 py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-2xl font-light text-gray-900 mb-8 text-center">
             New Arrivals
