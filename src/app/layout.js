@@ -4,8 +4,11 @@ import Loading from "./Components/Loading/Loading";
 import Navbar from "./Components/Navbar/Navbar";
 import "./globals.css";
 export const metadata = {
-  title: "Anusha Resin Arts",
-  description: "Anusha Resin Arts & Crafts",
+  title: "Sonalisingh Resin Arts",
+  description: "Sonalisingh Resin Arts & Crafts",
+  icons: {
+    icon: '/Sonalisingh-logo.png'
+  }
 };
 
 export default function RootLayout({ children }) {

@@ -9,30 +9,30 @@ const TutorialsPage = () => {
   const tutorials = [
     {
       id: 1,
-      title: 'Basic Resin Mixing Techniques',
-      description: 'Learn the proper way to mix resin to avoid bubbles and ensure proper curing.',
+      title: 'How to do a topical with resin',
+      description: 'In this video , i give you all the tips and tricks that are required to top coat your resin pieces . If you have any doubts leave a comment , i shall reply ..',
       category: 'beginner',
-      duration: '12 min',
-      image: 'https://i.pinimg.com/736x/3f/e1/be/3fe1bed38d7bf16ccde8e051e7ea46e3.jpg',
-      link: '#'
+      duration: '11 min',
+      image: "/images/img13.jpg",
+      link: 'https://youtu.be/u0j18DVAI6k?si=flmmZ9yFUEDfG9s4'
     },
     {
       id: 2,
-      title: 'Creating Ocean Resin Art',
-      description: 'Step-by-step guide to creating beautiful ocean wave effects with resin.',
+      title: 'How to make 3D flowers in resin ?',
+      description: 'Step-by-step guide to creating beautiful 3D flowers with resin.',
       category: 'intermediate',
-      duration: '25 min',
-      image: 'https://i.pinimg.com/1200x/44/c6/09/44c60923f127ec4e0e4a815a0f28bca7.jpg',
-      link: '#'
+      duration: '5 min',
+      image: '/images/img40.jpg',
+      link: 'https://youtu.be/KRGj4VU7Q6o?si=ky9v4FW0ScbH_s93'
     },
     {
       id: 3,
-      title: 'Geode Resin Art Masterclass',
+      title: 'Sonali Singh Rao | Indian Resin Artist | Resin Art India',
       description: 'Advanced techniques for creating stunning geode designs with resin and crystals.',
       category: 'advanced',
-      duration: '42 min',
-      image: 'https://i.pinimg.com/736x/de/0b/d8/de0bd8f4d9a5c4ef990f341dec90f55f.jpg',
-      link: '#'
+      duration: '2 min',
+      image: '/images/img57.jpg',
+      link: 'https://youtu.be/A91MfR44aUQ?si=J-ogQHB1Pay3EmfD'
     },
     {
       id: 4,
@@ -45,12 +45,12 @@ const TutorialsPage = () => {
     },
     {
       id: 5,
-      title: 'Adding Alcohol Inks to Resin',
+      title: 'RESIN ART INDIA🇮🇳 Pouring techniques coasters with resin',
       description: 'Learn how to use alcohol inks to create vibrant, colorful effects in your resin art.',
       category: 'intermediate',
       duration: '15 min',
       image: 'https://i.pinimg.com/736x/33/84/7e/33847eb8fce57b10531cf2d3c7908db4.jpg',
-      link: '#'
+      link: 'https://youtu.be/9GmhiW3lIz0?si=X9-uJoueR90SaQCn'
     },
     {
       id: 6,
@@ -59,7 +59,7 @@ const TutorialsPage = () => {
       category: 'advanced',
       duration: '35 min',
       image: 'https://i.pinimg.com/736x/70/ed/1f/70ed1f8032418201016b1bf8226300a3.jpg',
-      link: '#'
+      link: 'https://youtu.be/mI68v1reIC4?si=91Om1xD7gBK3y68_'
     }
   ];
 

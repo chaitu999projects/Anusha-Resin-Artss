@@ -8,7 +8,7 @@ const NewArrivals = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-
+  const whatsappNumber = 7259685931
   const productsPerPage = 6;
 
   useEffect(() => {
@@ -78,7 +78,7 @@ const NewArrivals = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
-              className="bg-white shadow-sm hover:shadow-md transition rounded-lg overflow-hidden"
+              className="bg-white shadow-sm hover:shadow-md transition py-5 overflow-hidden"
             >
               <div className="relative w-full h-64">
                 <Image
@@ -96,7 +96,10 @@ const NewArrivals = () => {
                 <p className="mt-2 text-sm text-gray-700 line-clamp-3">
                   {product.description}
                 </p>
+                <p className="text-sm text-gray-900">₹ {product.price}</p>
+
               </div>
+              <Link href={`https://wa.me/${whatsappNumber}?text=Hi, I am interested in this product`} className=" bg-black text-white font-light py-3 px-8 my-6 rounded-sm text-base tracking-wide transition-all duration-300">Learn More</Link>
             </motion.div>
           ))}
         </div>

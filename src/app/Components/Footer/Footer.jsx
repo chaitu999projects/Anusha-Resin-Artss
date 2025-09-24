@@ -1,5 +1,6 @@
 
 
+
 const Footer = () => {
   return (
     <footer className="bg-[#faf0ef] text-gray-700 px-4 py-8 mt-20">
@@ -154,7 +155,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://www.instagram.com/arts_of_anusha/"
+                href="https://www.instagram.com/sonalisinghrao/"
                 className="text-gray-500 hover:text-gray-900"
               >
                 <span className="sr-only">Instagram</span>
@@ -189,11 +190,11 @@ const Footer = () => {
         <div className="border-t border-gray-200 mt-8 pt-8 text-xs text-gray-500">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-2 md:mb-0">
-              <span>POWERED BY ANUSHA</span>
+              <span>POWERED BY SONALISINGH RAO</span>
             </div>
             <div>
               <span>
-                &copy; {new Date().getFullYear()} Anusha Resin Arts ❤️
+                &copy; {new Date().getFullYear()} Sonalisinghrao Resin Arts ❤️
               </span>
             </div>
           </div>

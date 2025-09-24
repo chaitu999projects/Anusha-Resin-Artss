@@ -178,7 +178,7 @@ const ContactPage = () => {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-sm font-medium text-gray-900">Email</h3>
-                    <p className="text-sm text-gray-600">contact@anusharesinarts.com</p>
+                    <p className="text-sm text-gray-600">contact@Sonalisinghresinarts.com</p>
                   </div>
                 </div>
               </div>
@@ -192,7 +192,7 @@ const ContactPage = () => {
               
               <div className="rounded-lg overflow-hidden shadow-md">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.8010359233535!2d77.59002037484052!3d12.920505787390214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15dd602d7f4f%3A0xa75f8de1779fd617!2sAnusha%20Arts%20%7C%7C%20Resin%20Arts%20-%20Bangalore%2C%20Resin%20Arts%20class!5e0!3m2!1sen!2sin!4v1758362238275!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.8010359233535!2d77.59002037484052!3d12.920505787390214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15dd602d7f4f%3A0xa75f8de1779fd617!2sSonalisingh%20Arts%20%7C%7C%20Resin%20Arts%20-%20Bangalore%2C%20Resin%20Arts%20class!5e0!3m2!1sen!2sin!4v1758362238275!5m2!1sen!2sin"
                   width="100%" 
                   height="450" 
                   style={{ border: 0 }} 

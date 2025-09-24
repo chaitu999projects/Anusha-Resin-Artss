@@ -14,7 +14,7 @@ const HeroPage = () => {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="/bg-v.mp4" type="video/mp4" />
+          <source src="/vd.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
@@ -25,10 +25,11 @@ const HeroPage = () => {
       {/* Content (static, no animation) */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-light mb-4 md:mb-6 tracking-wide">
-          Explore the World of <span className="font-normal">Resin Arts</span>
+          Custom Resin <span className="font-normal">Arts by Sonali Singh</span>
         </h1>
         <p className="text-lg sm:text-xl max-w-2xl mb-8 md:mb-10 font-extralight tracking-wide leading-relaxed">
-          Choose stunning resin art pieces and bring your imagination to life
+          Choose stunning resin art pieces and bring your imagination to life <br/>Handmade, one-of-a-kind resin creations — fully customizable. <br/>
+          You dream it — I craft it in resin. <br />
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <Link href='/new-arrivals' className=" bg-white text-black font-light py-3 px-8 rounded-sm text-base tracking-wide transition-all duration-300 hover:bg-gray-100">

@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { Dancing_Script, Playfair_Display } from "next/font/google";
+import Link from "next/link";
 
 // Fonts
 const playfair = Playfair_Display({ subsets: ["latin"], weight: ["700"] });
@@ -32,15 +33,15 @@ export default function ArtsAbout() {
             home, office, or personal style with handcrafted resin décor, jewelry, and keepsakes.
           </p>
 
-          <button className="mt-4 px-6 py-3 bg-black text-white text-sm tracking-wide rounded-md hover:bg-gray-800 transition-all duration-500">
-            SEE MORE ART ♡
-          </button>
+          <Link href='/gallery' className="mt-4 px-6 py-3 bg-black text-white text-sm tracking-wide rounded-md hover:bg-gray-800 transition-all duration-500">
+            SEE MORE ARTS ♡
+          </Link>
         </div>
 
         {/* Right Image */}
         <div className="relative w-full h-72 sm:h-80 md:h-[500px]">
           <Image
-            src="/pink-resin-art.jpg"
+            src="/images/img18.jpg"
             alt="Resin Art"
             fill
             className="object-cover rounded-lg shadow-sm"

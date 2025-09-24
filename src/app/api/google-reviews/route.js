@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   const apiKey = process.env.SERPAPI_KEY; 
-  const placeId = "ChIJT38tYN0VrjsRF9afd-GNX6c"; 
+  const placeId = "ChIJn0_ivG8VrjsRkCfD6UJrapg"; 
 
   try {
     const res = await fetch(

@@ -33,7 +33,7 @@ export default function AboutPage() {
           transition={{ duration: 0.7 }}
           className="font-playfair text-3xl md:text-4xl font-medium mb-6 text-gray-900 tracking-wide"
         >
-          About Anuisha Resin Arts
+          About Sonalisingh Resin Arts
         </motion.h1>
         <motion.div
           initial={{ opacity: 0 }}
@@ -63,7 +63,7 @@ export default function AboutPage() {
             Our Story
           </h2>
           <p className="text-gray-600 leading-relaxed mb-4 font-light">
-            Founded with a passion for blending art with functionality, Anuisha Resin Arts began as a small studio in Bangalore. Our journey started with experimenting with resin to create unique pieces that capture the fluid beauty of this versatile medium.
+            Founded with a passion for blending art with functionality, Sonalisingh Resin Arts began as a small studio in Bangalore. Our journey started with experimenting with resin to create unique pieces that capture the fluid beauty of this versatile medium.
           </p>
           <p className="text-gray-600 leading-relaxed mb-4 font-light">
             Each creation is meticulously handcrafted, emphasizing <span className="text-amber-600 font-normal">clean lines, organic forms, and subtle elegance</span>. We believe in the power of minimalism to highlight the natural beauty within each piece.

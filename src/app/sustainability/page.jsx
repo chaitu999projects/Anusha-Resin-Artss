@@ -22,7 +22,7 @@ const SustainabilityPage = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-serif font-light text-gray-800 mb-4">Our Commitment to Sustainability</h2>
             <p className="text-gray-600">
-              At Anusha Resin Arts, we believe that beautiful art shouldn't come at the expense of our planet. 
+              At Sonalisingh Resin Arts, we believe that beautiful art shouldn't come at the expense of our planet. 
               We're continuously working to reduce our environmental footprint through innovative practices and 
               responsible material sourcing.
             </p>

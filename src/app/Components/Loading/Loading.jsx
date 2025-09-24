@@ -28,15 +28,14 @@ export default function Loading() {
       
       {/* Main logo with enhanced animation */}
       <div className="relative mb-8">
-        <div className="absolute -inset-6 rounded-full bg-gray-400 animate-ping-slow"></div>
+        <div className="absolute -inset-6 rounded-full bg-pink-200 animate-ping-slow"></div>
         <div className="relative z-10">
-          <Image 
-            src='/anusha-logo.png' 
-            alt="Anusha Arts Logo" 
-            width={140} 
-            height={140}
-            className="transform transition-all duration-1000 animate-soft-bounce w-32 h-auto"
-          />
+          <h1
+              href="/"
+              className="text-2xl font-bold tracking-wide text-gray-900 hover:opacity-70 transition text-center"
+            >
+              SONALISINGH<br />RESIN ARTS
+            </h1>
         </div>
       </div>
       

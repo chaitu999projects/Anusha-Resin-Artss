@@ -76,7 +76,7 @@ export default function NewArrivalsPage() {
                     {product.title}
                   </h2>
                   <p className="text-sm text-gray-500 mb-2">{product.category}</p>
-                  <p className="text-gray-800 font-medium">INR{product.price}</p>
+                  <p className="text-gray-800 font-medium">₹{product.price}</p>
                 </div>
               ))}
             </div>

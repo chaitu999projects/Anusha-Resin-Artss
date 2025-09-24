@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState } from 'react';
@@ -32,15 +31,11 @@ const ResinCalculatorPage = () => {
     if (shape === 'rectangle') {
       volume = l * w * h;
     } else if (shape === 'circle') {
-      // For circle, length is diameter, width is unused
       const radius = l / 2;
       volume = Math.PI * Math.pow(radius, 2) * h;
     }
 
-    // Convert volume from cm³ to liters (1 liter = 1000 cm³)
     const liters = volume / 1000;
-    
-    // Calculate resin amounts based on mixing ratio
     const totalParts = ratioA + ratioB;
     const partA = (liters * ratioA / totalParts).toFixed(2);
     const partB = (liters * ratioB / totalParts).toFixed(2);
@@ -65,36 +60,36 @@ const ResinCalculatorPage = () => {
   };
 
   return (
-    <div className="min-h-screen mt-[167px] bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen mt-[167px] bg-pink-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md mx-auto">
         {/* Header */}
         <div className="text-center mb-10">
-          <h1 className="text-3xl font-light text-gray-800 mb-2">Resin Calculator</h1>
-          <p className="text-gray-600">Calculate the amount of resin needed for your project</p>
+          <h1 className="text-3xl font-semibold text-pink-600 mb-2">Resin Calculator</h1>
+          <p className="text-pink-500">Calculate the amount of resin needed for your project</p>
         </div>
 
         {/* Calculator Card */}
-        <div className="bg-white p-6 rounded-lg shadow-sm">
+        <div className="bg-white p-6 rounded-2xl shadow-md border border-pink-100">
           {/* Shape Selection */}
           <div className="mb-6">
-            <label className="block text-sm font-medium text-gray-700 mb-2">Shape</label>
+            <label className="block text-sm font-medium text-pink-700 mb-2">Shape</label>
             <div className="flex space-x-4">
               <button
                 onClick={() => setDimensions({...dimensions, shape: 'rectangle'})}
-                className={`px-4 py-2 rounded-md text-sm font-medium ${
+                className={`px-4 py-2 rounded-md text-sm font-medium transition ${
                   dimensions.shape === 'rectangle' 
-                    ? 'bg-gray-800 text-white' 
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-pink-600 text-white shadow-md' 
+                    : 'bg-pink-100 text-pink-700 hover:bg-pink-200'
                 }`}
               >
                 Rectangle
               </button>
               <button
                 onClick={() => setDimensions({...dimensions, shape: 'circle'})}
-                className={`px-4 py-2 rounded-md text-sm font-medium ${
+                className={`px-4 py-2 rounded-md text-sm font-medium transition ${
                   dimensions.shape === 'circle' 
-                    ? 'bg-gray-800 text-white' 
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-pink-600 text-white shadow-md' 
+                    : 'bg-pink-100 text-pink-700 hover:bg-pink-200'
                 }`}
               >
                 Circle
@@ -105,14 +100,14 @@ const ResinCalculatorPage = () => {
           {/* Dimensions Inputs */}
           <div className="space-y-4 mb-6">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-pink-700 mb-1">
                 {dimensions.shape === 'rectangle' ? 'Length (cm)' : 'Diameter (cm)'}
               </label>
               <input
                 type="number"
                 value={dimensions.length}
                 onChange={(e) => setDimensions({...dimensions, length: e.target.value})}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-1 focus:ring-gray-400 focus:border-gray-400 outline-none"
+                className="w-full px-3 py-2 border border-pink-300 rounded-md focus:ring-2 focus:ring-pink-400 focus:border-pink-400 outline-none"
                 placeholder={dimensions.shape === 'rectangle' ? 'Length' : 'Diameter'}
                 min="0"
                 step="0.1"
@@ -121,12 +116,12 @@ const ResinCalculatorPage = () => {
 
             {dimensions.shape === 'rectangle' && (
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Width (cm)</label>
+                <label className="block text-sm font-medium text-pink-700 mb-1">Width (cm)</label>
                 <input
                   type="number"
                   value={dimensions.width}
                   onChange={(e) => setDimensions({...dimensions, width: e.target.value})}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-1 focus:ring-gray-400 focus:border-gray-400 outline-none"
+                  className="w-full px-3 py-2 border border-pink-300 rounded-md focus:ring-2 focus:ring-pink-400 focus:border-pink-400 outline-none"
                   placeholder="Width"
                   min="0"
                   step="0.1"
@@ -135,12 +130,12 @@ const ResinCalculatorPage = () => {
             )}
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Height/Depth (cm)</label>
+              <label className="block text-sm font-medium text-pink-700 mb-1">Height/Depth (cm)</label>
               <input
                 type="number"
                 value={dimensions.height}
                 onChange={(e) => setDimensions({...dimensions, height: e.target.value})}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-1 focus:ring-gray-400 focus:border-gray-400 outline-none"
+                className="w-full px-3 py-2 border border-pink-300 rounded-md focus:ring-2 focus:ring-pink-400 focus:border-pink-400 outline-none"
                 placeholder="Height"
                 min="0"
                 step="0.1"
@@ -150,21 +145,21 @@ const ResinCalculatorPage = () => {
 
           {/* Mixing Ratio */}
           <div className="mb-6">
-            <label className="block text-sm font-medium text-gray-700 mb-2">Mixing Ratio (A:B)</label>
+            <label className="block text-sm font-medium text-pink-700 mb-2">Mixing Ratio (A:B)</label>
             <div className="flex items-center space-x-4">
               <input
                 type="number"
                 value={ratioA}
                 onChange={(e) => setRatioA(parseInt(e.target.value) || 1)}
-                className="w-16 px-3 py-2 border border-gray-300 rounded-md text-center focus:ring-1 focus:ring-gray-400 focus:border-gray-400 outline-none"
+                className="w-16 px-3 py-2 border border-pink-300 rounded-md text-center focus:ring-2 focus:ring-pink-400 focus:border-pink-400 outline-none"
                 min="1"
               />
-              <span className="text-gray-600">:</span>
+              <span className="text-pink-500">:</span>
               <input
                 type="number"
                 value={ratioB}
                 onChange={(e) => setRatioB(parseInt(e.target.value) || 1)}
-                className="w-16 px-3 py-2 border border-gray-300 rounded-md text-center focus:ring-1 focus:ring-gray-400 focus:border-gray-400 outline-none"
+                className="w-16 px-3 py-2 border border-pink-300 rounded-md text-center focus:ring-2 focus:ring-pink-400 focus:border-pink-400 outline-none"
                 min="1"
               />
             </div>
@@ -174,13 +169,13 @@ const ResinCalculatorPage = () => {
           <div className="flex space-x-3">
             <button
               onClick={calculateResin}
-              className="flex-1 py-3 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition"
+              className="flex-1 py-3 bg-pink-600 text-white rounded-md shadow-md hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-400 transition"
             >
               Calculate
             </button>
             <button
               onClick={resetCalculator}
-              className="px-4 py-3 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition"
+              className="px-4 py-3 bg-pink-100 text-pink-700 rounded-md hover:bg-pink-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-300 transition"
             >
               Reset
             </button>
@@ -188,31 +183,31 @@ const ResinCalculatorPage = () => {
 
           {/* Results */}
           {resinAmount && (
-            <div className="mt-6 p-4 bg-blue-50 rounded-md">
-              <h3 className="text-lg font-medium text-gray-800 mb-2">Results</h3>
-              <div className="space-y-2">
-                <p className="text-gray-700">Total resin needed: <span className="font-medium">{resinAmount.total} liters</span></p>
-                <p className="text-gray-700">Part A: <span className="font-medium">{resinAmount.partA} liters</span></p>
-                <p className="text-gray-700">Part B: <span className="font-medium">{resinAmount.partB} liters</span></p>
+            <div className="mt-6 p-4 bg-pink-50 border border-pink-200 rounded-lg">
+              <h3 className="text-lg font-semibold text-pink-700 mb-2">Results</h3>
+              <div className="space-y-2 text-pink-800">
+                <p>Total resin needed: <span className="font-bold">{resinAmount.total} liters</span></p>
+                <p>Part A: <span className="font-bold">{resinAmount.partA} liters</span></p>
+                <p>Part B: <span className="font-bold">{resinAmount.partB} liters</span></p>
               </div>
             </div>
           )}
         </div>
 
         {/* Tips Section */}
-        <div className="mt-8 bg-white p-6 rounded-lg shadow-sm">
-          <h3 className="text-lg font-medium text-gray-800 mb-4">Helpful Tips</h3>
-          <ul className="space-y-2 text-sm text-gray-600">
+        <div className="mt-8 bg-white p-6 rounded-2xl shadow-md border border-pink-100">
+          <h3 className="text-lg font-semibold text-pink-600 mb-4">Helpful Tips</h3>
+          <ul className="space-y-2 text-sm text-pink-700">
             <li className="flex items-start">
-              <span className="text-gray-400 mr-2">•</span>
+              <span className="text-pink-400 mr-2">•</span>
               <span>Always mix a little extra resin to account for spills and miscalculations (add 10-15%)</span>
             </li>
             <li className="flex items-start">
-              <span className="text-gray-400 mr-2">•</span>
+              <span className="text-pink-400 mr-2">•</span>
               <span>Measure dimensions in centimeters for accurate results</span>
             </li>
             <li className="flex items-start">
-              <span className="text-gray-400 mr-2">•</span>
+              <span className="text-pink-400 mr-2">•</span>
               <span>Check your resin's specific mixing ratio (common ratios are 1:1, 2:1, or 3:1)</span>
             </li>
           </ul>
