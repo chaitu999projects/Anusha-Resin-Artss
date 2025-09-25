@@ -4,8 +4,8 @@ import Loading from "./Components/Loading/Loading";
 import Navbar from "./Components/Navbar/Navbar";
 import "./globals.css";
 export const metadata = {
-  title: "Sonalisingh Resin Arts",
-  description: "Sonalisingh Resin Arts & Crafts",
+  title: "Sonalisinghrao Resin Arts",
+  description: "Sonalisinghrao Resin Arts & Crafts",
   icons: {
     icon: '/Sonalisingh-logo.png'
   }

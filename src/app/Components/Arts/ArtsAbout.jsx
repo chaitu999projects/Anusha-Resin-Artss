@@ -33,7 +33,7 @@ export default function ArtsAbout() {
             home, office, or personal style with handcrafted resin décor, jewelry, and keepsakes.
           </p>
 
-          <Link href='/gallery' className="mt-4 px-6 py-3 bg-black text-white text-sm tracking-wide rounded-md hover:bg-gray-800 transition-all duration-500">
+          <Link href='/all-products' className="mt-4 px-6 py-3 bg-black text-white text-sm tracking-wide rounded-md hover:bg-gray-800 transition-all duration-500">
             SEE MORE ARTS ♡
           </Link>
         </div>

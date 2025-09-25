@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function Loading() {
@@ -9,72 +8,105 @@ export default function Loading() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setFadeOut(true);
-      setTimeout(() => setLoading(false), 800); // Longer fade out for smoother transition
-    }, 2500); // Slightly longer loading time
-    
+      setTimeout(() => setLoading(false), 800);
+    }, 2500);
+
     return () => clearTimeout(timer);
   }, []);
 
   if (!loading) return null;
 
   return (
-    <div className={`fixed inset-0 flex flex-col items-center justify-center bg-white z-50 transition-all duration-700 ${fadeOut ? 'opacity-0 scale-105' : 'opacity-100 scale-100'}`}>
-      
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gray-50 animate-pulse-slow"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-24 h-24 rounded-full bg-gray-50 animate-pulse-slower"></div>
+    <div
+      className={`fixed inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-pink-50 via-white to-pink-100 z-50 transition-all duration-700 ${
+        fadeOut ? "opacity-0 scale-105" : "opacity-100 scale-100"
+      }`}
+    >
+      {/* Resin-like rotating drop */}
+      <div className="relative w-28 h-28 mb-6">
+        <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-pink-400 via-pink-200 to-white animate-spin-slow shadow-lg"></div>
+        <div className="absolute inset-3 rounded-full bg-white shadow-inner animate-glow"></div>
       </div>
-      
-      {/* Main logo with enhanced animation */}
-      <div className="relative mb-8">
-        <div className="absolute -inset-6 rounded-full bg-pink-200 animate-ping-slow"></div>
-        <div className="relative z-10">
-          <h1
-              href="/"
-              className="text-2xl font-bold tracking-wide text-gray-900 hover:opacity-70 transition text-center"
-            >
-              SONALISINGH<br />RESIN ARTS
-            </h1>
-        </div>
-      </div>
-      
-      {/* Elegant progress indicator */}
-      <div className="relative w-40 h-0.5 bg-gray-200/80 rounded-full overflow-hidden mt-6">
-        <div className="absolute h-full bg-gray-800 rounded-full animate-progress"></div>
-      </div>
-      
-      {/* Optional subtle text */}
-      <p className="mt-6 text-sm text-gray-500 font-light tracking-wider animate-pulse">LOADING</p>
-      
+
+      {/* Brand shimmer text */}
+      <h1 className="text-2xl sm:text-3xl font-bold tracking-widest text-gray-900 relative">
+        <span className="animate-shimmer bg-gradient-to-r from-pink-400 via-gray-900 to-pink-400 bg-[length:200%_100%] text-transparent bg-clip-text">
+          SONALISINGHRAO
+        </span>
+        <br />
+        <span className="animate-shimmer bg-gradient-to-r from-gray-900 via-pink-500 to-gray-900 bg-[length:200%_100%] text-transparent bg-clip-text text-xl sm:text-2xl">
+          RESIN ARTS
+        </span>
+      </h1>
+
+      {/* Resin drip effect */}
+      <div className="mt-8 w-2 h-10 bg-pink-400 rounded-full animate-drip"></div>
+
+      {/* Small text */}
+      <p className="mt-6 text-sm text-gray-600 tracking-[0.3em] animate-soft-blink">
+        LOADING
+      </p>
+
       <style jsx global>{`
-        @keyframes soft-bounce {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-8px); }
+        @keyframes spin-slow {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
         }
-        @keyframes progress {
-          0% { width: 0%; left: 0%; }
-          50% { width: 60%; left: 20%; }
-          100% { width: 100%; left: 0%; }
+        @keyframes glow {
+          0%,
+          100% {
+            box-shadow: 0 0 10px rgba(236, 72, 153, 0.4),
+              inset 0 0 10px rgba(236, 72, 153, 0.2);
+          }
+          50% {
+            box-shadow: 0 0 20px rgba(236, 72, 153, 0.7),
+              inset 0 0 15px rgba(236, 72, 153, 0.4);
+          }
         }
-        @keyframes ping-slow {
-          0% { transform: scale(0.8); opacity: 0.8; }
-          75%, 100% { transform: scale(2.2); opacity: 0; }
+        @keyframes shimmer {
+          0% {
+            background-position: -200% 0;
+          }
+          100% {
+            background-position: 200% 0;
+          }
         }
-        .animate-soft-bounce {
-          animation: soft-bounce 2s ease-in-out infinite;
+        @keyframes drip {
+          0% {
+            transform: translateY(0) scaleY(1);
+            opacity: 1;
+          }
+          70% {
+            transform: translateY(20px) scaleY(1.3);
+            opacity: 0.7;
+          }
+          100% {
+            transform: translateY(40px) scaleY(0.8);
+            opacity: 0;
+          }
         }
-        .animate-progress {
-          animation: progress 1.8s ease-in-out infinite;
+        @keyframes soft-blink {
+          0%, 100% { opacity: 0.3; }
+          50% { opacity: 1; }
         }
-        .animate-ping-slow {
-          animation: ping-slow 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+        .animate-spin-slow {
+          animation: spin-slow 6s linear infinite;
         }
-        .animate-pulse-slow {
-          animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        .animate-glow {
+          animation: glow 3s ease-in-out infinite;
         }
-        .animate-pulse-slower {
-          animation: pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        .animate-shimmer {
+          animation: shimmer 3s linear infinite;
+        }
+        .animate-drip {
+          animation: drip 1.8s ease-in-out infinite;
+        }
+        .animate-soft-blink {
+          animation: soft-blink 2s ease-in-out infinite;
         }
       `}</style>
     </div>

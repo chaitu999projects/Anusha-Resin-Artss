@@ -93,7 +93,7 @@ export default function Navbar() {
               href="/"
               className="text-xl font-semibold tracking-wide text-gray-900 hover:opacity-70 transition text-center"
             >
-              SONALISINGH<br />RESIN ARTS
+              SONALISINGHRAO<br />RESIN ARTS
             </Link>
           </div>
 
