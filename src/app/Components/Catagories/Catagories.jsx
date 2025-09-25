@@ -3,12 +3,11 @@ import Link from "next/link";
 import { useRef, useEffect, useState } from "react";
 
 const categories = [
-  { name: "Resins", video: "/resins.mp4", link:"/resins"},
-  { name: "Pigments", video: "/pigments.mp4", link:"/pigments" },
-  { name: "Glitters", video: "/glitters.mp4", link:"/glitters" },
-  { name: "Accessories", video: "/accessories.mp4", link:"/accessories" },
-  { name: "Moulds", video: "/moulds.mp4", link:"/moulds" },
-  { name: "Kits", video: "/kits.mp4", link:"/kits" },
+  { name: "All", video: "/kits.mp4", link:"/all-products" },
+  { name: "Tables", video: "/resins.mp4", link:"/tables"},
+  { name: "Wall Arts", video: "/pigments.mp4", link:"/wall-arts" },
+  { name: "Clocks", video: "/glitters.mp4", link:"/clocks" },
+  { name: "Trays Coasters", video: "/accessories.mp4", link:"/trays-coasters" },
 ];
 
 export default function Categories() {
@@ -62,7 +61,7 @@ export default function Categories() {
         ref={scrollRef}
         className="overflow-x-auto scrollbar-hide cursor-grab"
       >
-        <div className="flex space-x-6 px-6 justify-start md:justify-center flex-nowrap">
+        <div className="flex space-x-3 px-6 justify-start md:justify-center flex-nowrap">
           {categories.map((cat, index) => (
             <div
               key={index}

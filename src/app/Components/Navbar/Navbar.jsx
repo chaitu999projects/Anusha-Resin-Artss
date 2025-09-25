@@ -11,6 +11,7 @@ export default function Navbar() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [showNavbar, setShowNavbar] = useState(true);
   const navbarRef = useRef(null);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
     const controlNavbar = () => {
@@ -30,7 +31,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "HOME", href: "/" },
-    { name: "ALL PRODUCTS", href: "/new-arrivals" },
+    { name: "PRODUCTS", href: "#", hasDropdown: true },
     { name: "GALLERY", href: "/gallery" },
     { name: "ABOUT US", href: "/about" },
     { name: "RESIN CALCULATOR", href: "/resin-calculator" },
@@ -39,9 +40,14 @@ export default function Navbar() {
   ];
 
   const categories = [
-    { name: "Resin Art & Craft", href: "/resin-art" },
-    { name: "Gift Hampers & Accessories", href: "/gift-hampers" },
-    { name: "Party & Decoration Products", href: "/party" },
+    { name: "All Products", href: "/all-products"},
+    { name: "Side Table", href: "/side-table" },
+    { name: "Center Table", href: "/center-table" },
+    { name: "Dining Table", href: "/dining-table" },
+    { name: "Conference Table", href: "/conference-table" },
+    { name: "Wall Arts", href: "/wall-arts" },
+    { name: "Clocks", href: "/clocks" },
+    { name: "Trays Coasters", href: "/trays-coasters" },
   ];
 
   return (
@@ -92,16 +98,45 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Nav Links */}
-          <div className="hidden md:flex gap-8 font-medium text-gray-900">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="hover:underline underline-offset-4 transition"
-              >
-                {link.name}
-              </Link>
-            ))}
+          <div className="hidden md:flex gap-8 font-medium text-gray-900 relative">
+            {navLinks.map((link) =>
+              link.hasDropdown ? (
+                <div
+                  key={link.name}
+                  className="relative"
+                  onMouseEnter={() => setDropdownOpen(true)}
+                  onMouseLeave={() => setDropdownOpen(false)}
+                >
+                  <Link
+                    href={link.href}
+                    className="hover:underline underline-offset-4 transition"
+                  >
+                    {link.name}
+                  </Link>
+                  {dropdownOpen && (
+                    <div className="absolute left-0 mt-0.5 w-48 bg-white shadow-lg py-2 z-50">
+                      {categories.map((cat) => (
+                        <Link
+                          key={cat.name}
+                          href={cat.href}
+                          className="block px-4 py-2 text-sm text-gray-700 hover:text-pink-300 uppercase transition"
+                        >
+                          {cat.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="hover:underline underline-offset-4 transition"
+                >
+                  {link.name}
+                </Link>
+              )
+            )}
           </div>
         </div>
       </div>
@@ -159,7 +194,7 @@ export default function Navbar() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="block hover:underline underline-offset-4 transition-colors"
+                    className="block hover:underline underline-offset-4 transition-colors uppercase"
                     onClick={() => setSidebarOpen(false)}
                   >
                     {link.name}
